@@ -27,7 +27,7 @@
                     <div class="swiper__title">
                     <h1>CORPORACION TECNICA <br>DEL MAGDALENA </h1>
                     <h2>Elige la carrera de tus sueños a tan solo un click</h2>
-                    <a href="#">Aplicar</a>
+                    <a href="#">Contactar</a>
                 </div>
                 <div class="swiper__navegation-buttons">
                     <div class="arrow__container arrow-header prev"><i class="fas fa-angle-left"></i></div>
@@ -127,17 +127,29 @@
                     generarTarjetaYModal($cardFarmacia, 4);
                     ?>
                 </div>
+
+                <div class="item_carousel" draggable="false">
+                <?php
+                    // Llama a la función para generar la tarjeta y el modal
+                    generarTarjetaYModal($cardLaboratorio, 14);
+                            
+                    ?>
+                </div>
+                <div class="item_carousel" draggable="false">
+                <?php
+                    // Llama a la función para generar la tarjeta y el modal
+                    generarTarjetaYModal($cardTerapeuta, 15);
+                    ?>
+                </div>
         </div>
         <i id="right" class="arrow fas fa-angle-right"></i>
     </div>
 </section>
 
-
-
             <!-- video de presentacion -->
             <article class="video__pre width__basic">
                 <div class="video__container">
-                    <iframe loading="lazy" class="video__cotemag" width="80%" height="623" src="https://www.youtube.com/embed/_Y9AaMg7wxA" title="Cotemag" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe loading="lazy" class="video__cotemag" width="50%" height="623" src="https://www.youtube.com/embed/_Y9AaMg7wxA" title="Cotemag" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </article>
             <div class="video__fondo basic__style"></div>
@@ -160,7 +172,7 @@
                                 <p><i class="fa-regular fa-user"></i> Angello</p>
                                 <p><i class="fa-regular fa-calendar"></i> 9 Junio, 2023</p>
                             </div>
-                            <h4>Nuevos programas tenelogicos en camino</h4>
+                            <h4>Nuevos programas tecnológicos en camino</h4>
                         </a>
                         <a href="#" class="new__card">
                             <div class="news__img">
@@ -191,7 +203,9 @@
                     </div>
                 </div>
             </article>
-    </main>
+
+
+</main>
 
 
 

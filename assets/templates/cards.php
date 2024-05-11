@@ -46,6 +46,7 @@ function generarTarjetaYModal($card, $index) {
         }
     }
         echo '</div>';
+        
         // Lista de módulos
         echo '<div class="modal__modulos">';
         echo '<p>' . $card['modulos-title'] . '</p>';
@@ -54,6 +55,8 @@ function generarTarjetaYModal($card, $index) {
             echo '<li>' . $modulo . '</li>';
         }
         echo '</ul>';
+        echo '<div class="row">';
+        echo '<div class="complementarias">';
         //Actividades complementarias
         if (!empty($card['complementarias'])) {
             echo '<p>' . $card['complementarias-title'] . '</p>';
@@ -63,6 +66,8 @@ function generarTarjetaYModal($card, $index) {
             }
             echo '</ul>';
         }
+        echo '</div>';
+        echo '<div class="practicas">';
         //Practicas laborales
         if (!empty($card['practicas'])) {
             echo '<p>' . $card['practicas-title'] . '</p>';
@@ -72,8 +77,10 @@ function generarTarjetaYModal($card, $index) {
             }
             echo '</ul>';
         }
+        echo '</div>';
+        echo '</div>';
         //Requisitos
-        echo '<p>Requisitos para matricularse</p>';
+        echo '<p>Requisitos Para Matricularse</p>';
         echo '<ul>';
         foreach ($card['requisitos'] as $index => $modulo) {
             if ($index === 4) {
@@ -82,6 +89,7 @@ function generarTarjetaYModal($card, $index) {
                 echo '<li>' . $modulo . '</li>';
             }
         }
+
         echo '</ul>';
         echo '</div>';
         echo '</div>';
@@ -90,7 +98,7 @@ function generarTarjetaYModal($card, $index) {
 }
 
 //Diseño grafico
-
+ 
 $cardDiseño = array(
     //Card
     'titulo' => 'Auxiliar en Diseño Gráfico',

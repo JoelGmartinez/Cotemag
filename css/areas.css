@@ -268,6 +268,7 @@
     width: 100%;
     gap: 3rem;
     flex-direction: column;
+
 }
 
 .curso__title{
@@ -277,9 +278,12 @@
 }
 
 .curso__title h2{
+    display: flex;
     font-size: 2.5rem;
     color: var(--secundari-color);
     font-weight: 600;
+    height: 40px;
+    
 }
 
 .curso__title p{
@@ -307,9 +311,6 @@
     gap: 1rem;
 }
 
-
-
-
 .curso__img{
     overflow: hidden;
     border-radius: 5px;
@@ -325,8 +326,6 @@
 .card__curse:hover > .curso__img img{
     scale: 1.1;
 }
-
-
 
 .card__curse h3{
     font-size: 1rem;
@@ -384,7 +383,7 @@
 }
 
 .modal__container::-webkit-scrollbar{
-    width: 15px;
+    width: 10px;
 }
 
 .modal__container::-webkit-scrollbar-thumb{
@@ -396,7 +395,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .modal__close i{
@@ -405,23 +404,25 @@
 }
 
 .modal__container h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 45px;
     text-align:  center;
     font-weight: 600;
 }
 
 .modal__img{
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin: 0 auto;
 }
 
 .modal__img img{
     border-radius: 5px;
+    width: 500px;
 }
 
 .modal__info{
     color: var(--font-color-black);
-    font-size: 1.2rem;
+    font-size:0.9rem;
 }
 
 .modal__modulos{
@@ -431,8 +432,16 @@
     color: var(--font-color-black);
 }
 
+.row{
+    display: flex;
+}
+.row .practicas{
+    margin-left: 30%;
+}
+
 .modal__modulos p{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: var(--secundari-color);
 }
 
@@ -443,6 +452,7 @@
 .modal__modulos li{
     list-style: disc;
     margin-left: 1rem;
+    font-size: 0.9rem;
 }
 
 .modal__modulos li a{
@@ -477,20 +487,17 @@
         padding: 0% 2%;
     }
 
-    /* seccion areas */
-    .contenedor__areas{
-        flex-direction: column;
-    }
-
     .seccionLateralIzquierda{
-        width: 100%;
+        width: 50%;
         align-items: center;
+        /* position: static;  */
     }
 
     .seccionLateralIzquierda ol{
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: left;
+        flex-direction: column;
         justify-content: flex-start;
         gap: .2rem;
     }
@@ -502,10 +509,17 @@
     .main__cursos{
         width: 100%;
     }
+    .card__curse {
+        width: calc(80% / 2);
+    }
+    .curso__title h2{
+        font-size: 1.9rem;
+
+    }
+
+
 
 }
-
-
 
 @media screen and (max-width: 950px) {
 
@@ -513,6 +527,38 @@
         width: calc(95% / 2);
     }
 }
+
+@media (max-width: 900px) {
+
+  /* seccion areas*/
+    .contenedor__areas{
+        flex-direction: column;
+  
+    }
+
+    /* .cursos__container{
+        justify-content: center;
+        
+    } */
+
+    .seccionLateralIzquierda{
+        position: static;  
+    }
+
+    .card__curse {
+        width: calc(90% / 3);
+        
+    }
+    
+    .curso__img{
+        height: 250px;
+    }
+    .curso__title h2{
+        font-size: 2.5rem;
+
+    }
+
+} 
 
 @media (max-width: 830px){
     /* header */
@@ -523,17 +569,26 @@
     .header__titles p{
         font-size: 1.5rem;
     }
+    .card__curse {
+        width: calc(80% / 2);
+        
+    }
+
+    
 }
 
 
-  @media (max-width: 767px){
+@media (max-width: 767px){
 
     .card__curse{
-        width: calc(95% / 2);
+        width: calc(90% / 2);
+        
     }
-  }
 
-  @media (max-width: 680px){
+
+}
+
+@media (max-width: 680px){
         /* header */
         .header__titles h1{
             font-size: 3rem;
@@ -544,19 +599,46 @@
         }
 
         .modal__container{
-            width: 100%;
-            height: 100%;
+            width: 95%;
+            height: 95%;
         }
 
         .modal__container h2{
             font-size: 1.5rem;
             line-height: 45px;
         }
-  }
+        .card__curse{
+        width: calc(90% / 2);
+        
+        }
+        .seccionLateralIzquierda{
+            width: 70%;
 
-  @media screen and (max-width: 550px) {
+        }
+
+}
+
+@media screen and (max-width: 550px) {
     .card__curse{
-        width: 100%;
+        width: 90%;
+        height: 500px;
+    }
+
+    .curso__img {
+        height: 500px;
+    }
+    .curso__title h2{
+        font-size: 2rem;
+
+    }
+    .curso__info p{
+        font-size: 1rem;
+    }
+    .card__curse h3{
+        font-size: 1.3rem;
+    }
+    .cursos__container{
+        justify-content: center;
     }
 }
 
@@ -611,6 +693,11 @@
     /* swiper */
     .swiper h2{
         line-height: 40px;
+    }
+
+    .seccionLateralIzquierda{
+        width: 95%;
+
     }
 }
 
